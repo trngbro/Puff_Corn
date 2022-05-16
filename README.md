@@ -1,7 +1,7 @@
  
 
 
-> Open this page at [https://l0cdz.github.io/talk/](https://l0cdz.github.io/talk/)
+> Open this page at [fb.com/trngbro](https://www.facebook.com/trngbro)
 
 ## Use as Extension
 
