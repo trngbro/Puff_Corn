@@ -736,6 +736,7 @@ nv2_talk1 = sprites.create(img`
     `, SpriteKind.Player)
 nv1_talk1.setPosition(50, 82)
 nv2_talk1.setPosition(100, 81)
+game.showLongText("sjdfioasdg", DialogLayout.Bottom)
 game.showLongText("About 300 years ago, in the kingdom of Kurskal, there was a princess who fell in love with a poor boy but was not accepted by the King, so she and the boy fled to a forest edge to live.", DialogLayout.Full)
 game.showLongText("Unfortunately, the boy fell seriously ill, she secretly brought him back to the kingdom to find a doctor to treat him, but no one had that ability.", DialogLayout.Full)
 game.showLongText("The princess happened to meet a Witch who told her about the legend of the Kusloft forest ", DialogLayout.Full)
