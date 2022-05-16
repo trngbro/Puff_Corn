@@ -555,7 +555,7 @@ function Map1 () {
     scene.cameraFollowSprite(nv_map1)
     game.showLongText("The princess has reached the edge of the forest. Ahead is a dark forest", DialogLayout.Full)
     game.showLongText("Find a way to get over it", DialogLayout.Bottom)
-    tiles.placeOnRandomTile(nv_map1, sprites.builtin.forestTiles0)
+    tiles.placeOnRandomTile(nv_map1, sprites.castle.tileGrass2)
 }
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
     game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
