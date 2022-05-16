@@ -1,0 +1,35 @@
+{
+    "name": "Talk",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.1",
+        "pxt-circuit-playground-character-icons": "github:adafruit/Circuit-Playground-Character-Icons#v0.0.8",
+        "sprite-scaling": "*",
+        "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1",
+        "darts": "*",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
+        "light": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.8.22",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj"
+}
