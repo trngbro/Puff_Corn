@@ -102,7 +102,7 @@ function Map2 () {
         `, SpriteKind.Player)
     controller.moveSprite(nv_map2, 100, 0)
     nv_map2.ay = 500
-    tiles.placeOnRandomTile(nv_map2, sprites.builtin.brick)
+    tiles.placeOnRandomTile(nv_map2, assets.tile`myTile16`)
     scene.cameraFollowSprite(nv_map2)
     game.showLongText("This is the mountain god Blicz that protects the center of the forest", DialogLayout.Bottom)
     game.showLongText("Try to climb over the mountain and be careful on high", DialogLayout.Bottom)
@@ -620,6 +620,8 @@ game.showLongText("\"test\"", DialogLayout.Bottom)
 game.showLongText("About 300 years ago, in the kingdom of Kurskal, there was a princess who fell in love with a poor boy but was not accepted by the King, so she and the boy fled to a forest edge to live.", DialogLayout.Full)
 game.showLongText("Unfortunately, the boy fell seriously ill, she secretly brought him back to the kingdom to find a doctor to treat him, but no one had that ability.", DialogLayout.Full)
 game.showLongText("The princess happened to meet a Witch who told her about the legend of the Kusloft forest ", DialogLayout.Full)
+story.spriteSayText(nv2_talk1, "The Kusloft forest center has a Forest Spirit, if there is a Forest Spirit, it may not be possible to cure all diseases.", 15)
+game.showLongText("Because she loved the boy so much, she decided to enter the Kusloft forest despite the Witch's intervention because the forest was full of mystery and danger.", DialogLayout.Full)
 Map1()
 game.onUpdate(function () {
     if (x1 == 1) {
