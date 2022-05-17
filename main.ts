@@ -102,7 +102,7 @@ function Map2 () {
         `, SpriteKind.Player)
     controller.moveSprite(nv_map2, 100, 0)
     nv_map2.ay = 500
-    tiles.placeOnRandomTile(nv_map2, sprites.castle.tilePath5)
+    tiles.placeOnRandomTile(nv_map2, sprites.builtin.brick)
     scene.cameraFollowSprite(nv_map2)
     game.showLongText("This is the mountain god Blicz that protects the center of the forest", DialogLayout.Bottom)
     game.showLongText("Try to climb over the mountain and be careful on high", DialogLayout.Bottom)
@@ -402,6 +402,11 @@ function Map3 () {
     x1 = 1
     boss_map3()
 }
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.field1, function (sprite, location) {
+    game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
+    x0 = 1
+    Map2()
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileGrass2, function (sprite, location) {
     Map3()
     game.showLongText("This is a forbidden land guarded by a Guardian God", DialogLayout.Bottom)
@@ -431,16 +436,12 @@ function Map1 () {
         . . . . . f f . . f f . . . . . 
         `, SpriteKind.Player)
     controller.moveSprite(nv_map1, 100, 100)
+    tiles.placeOnRandomTile(nv_map1, sprites.builtin.field0)
     scene.cameraFollowSprite(nv_map1)
     game.showLongText("The princess has reached the edge of the forest. Ahead is a dark forest", DialogLayout.Full)
     game.showLongText("Find a way to get over it", DialogLayout.Bottom)
     tiles.placeOnRandomTile(nv_map1, sprites.builtin.forestTiles0)
 }
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleInsignia, function (sprite, location) {
-    game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
-    x0 = 1
-    Map2()
-})
 let nv_map4: Sprite = null
 let nv_map1: Sprite = null
 let statusbar: StatusBarSprite = null
@@ -619,8 +620,6 @@ game.showLongText("\"test\"", DialogLayout.Bottom)
 game.showLongText("About 300 years ago, in the kingdom of Kurskal, there was a princess who fell in love with a poor boy but was not accepted by the King, so she and the boy fled to a forest edge to live.", DialogLayout.Full)
 game.showLongText("Unfortunately, the boy fell seriously ill, she secretly brought him back to the kingdom to find a doctor to treat him, but no one had that ability.", DialogLayout.Full)
 game.showLongText("The princess happened to meet a Witch who told her about the legend of the Kusloft forest ", DialogLayout.Full)
-story.spriteSayText(nv2_talk1, "The Kusloft forest center has a Forest Spirit, if there is a Forest Spirit, it may not be possible to cure all diseases.", 15)
-game.showLongText("Because she loved the boy so much, she decided to enter the Kusloft forest despite the Witch's intervention because the forest was full of mystery and danger.", DialogLayout.Full)
 Map1()
 game.onUpdate(function () {
     if (x1 == 1) {
