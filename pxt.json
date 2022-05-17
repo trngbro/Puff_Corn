@@ -9,7 +9,8 @@
         "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1",
         "darts": "*",
         "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
-        "light": "*"
+        "light": "*",
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2"
     },
     "files": [
         "main.blocks",
