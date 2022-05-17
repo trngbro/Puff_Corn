@@ -73,10 +73,10 @@ function boss_map3 () {
     boss.ay = 500
     tiles.placeOnRandomTile(boss, sprites.dungeon.collectibleRedCrystal)
 }
-scene.onOverlapTile(SpriteKind.Player, sprites.vehicle.roadHorizontal, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, location) {
     game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
     x0 = 1
-    Map2()
+    Map3()
 })
 function Map2 () {
     nv_map1.destroy()
@@ -88,12 +88,12 @@ function Map2 () {
         . . . f e 4 5 5 5 5 4 e f . . . 
         . . f b 3 e 4 4 4 4 e 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 4 b 3 4 4 3 b 4 3 3 f . 
-        . f 3 3 f f 4 4 4 4 f f 3 3 f . 
-        . f 4 4 f 1 f 4 4 f 1 f 4 4 f . 
-        . f 4 4 4 1 f d d f 1 4 4 4 f . 
-        f f 4 4 f d d d d d d f 4 4 f f 
-        f 4 4 f f f d d d d f f f 4 4 f 
+        . f 3 3 e b 3 e e 3 b e 3 3 f . 
+        . f 3 3 f f e e e e f f 3 3 f . 
+        . f e e f 1 f e e f 1 f e e f . 
+        . f e e e 1 f d d f 1 e e e f . 
+        f f e e f d d d d d d f e e f f 
+        f e e f f f d d d d f f f e e f 
         . f d d f b b b b b b f d d f . 
         . . d d c d d d d d d c d d . . 
         . . d f b d b d b d b b f d . . 
@@ -112,16 +112,16 @@ function Map2 () {
         . . . f b 3 3 e 4 5 5 5 5 f . . 
         . . f b 3 3 3 3 e 4 4 4 e f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . . f 3 3 3 3 e b 3 e e 3 3 f . 
-        . . f 3 3 3 3 f f e e e 3 3 f . 
-        . . f b b b b f b f e e e 3 f . 
-        . . f b b b b e 1 f 4 4 e f . . 
-        . f f b b b b f 4 4 4 4 f . . . 
-        . f b b b b f f f e e e f . . . 
-        . . f b b f 4 4 e d d d f . . . 
-        . . . f f e 4 4 e d d d f . . . 
-        . . . . f b e e b d b d b f . . 
-        . . . . f f d 1 d 1 d 1 f f . . 
+        . . f 3 3 3 3 e b 3 d d 3 3 f . 
+        . . f 3 3 3 3 f f d d d 3 3 f . 
+        . . f e e e e f 9 f d d d 3 f . 
+        . . f e e e e e 9 f 1 1 d f . . 
+        . f f e e e e f 1 1 1 1 f . . . 
+        . f e e e e f f f e e e f . . . 
+        . . f e e f d d 1 4 4 4 f . . . 
+        . . . f f 1 d d 1 4 4 4 f . . . 
+        . . . . f b 1 1 b 4 b 4 b f . . 
+        . . . . f f 4 1 4 1 4 1 f f . . 
         . . . . . . f f b b f f . . . . 
         `,img`
         . . . . . . . . . . . . . . . . 
@@ -152,15 +152,15 @@ function Map2 () {
         . . f 5 5 5 5 4 e 3 3 b f . . . 
         . . f e 4 4 4 e 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e e 3 b e 3 3 3 3 f . . 
-        . f 3 3 e e e f f 3 3 3 3 f . . 
-        . f 3 e e e f b f b b b b f . . 
-        . . f e 4 4 f 1 e b b b b f . . 
-        . . . f 4 4 4 4 f b b b b f f . 
-        . . . f e e e f f f b b b b f . 
-        . . . f d d d e 4 4 f b b f . . 
-        . . . f d d d e 4 4 e f f . . . 
-        . . f b d b d b e e b f . . . . 
+        . f 3 3 d d 3 b d 3 3 3 3 f . . 
+        . f 3 3 d d d f f 3 3 3 3 f . . 
+        . f 3 d d d f 9 f e e e e f . . 
+        . . f d 1 1 f 9 e e e e e f . . 
+        . . . f 1 1 1 1 f e e e e f f . 
+        . . . f 1 1 1 f f f e e e e f . 
+        . . . f 4 4 4 1 4 4 f e e f . . 
+        . . . f 4 4 4 1 4 4 1 f f . . . 
+        . . f b 4 b 4 b 1 1 b f . . . . 
         . . f f 1 d 1 d 1 d f f . . . . 
         . . . . f f b b f f . . . . . . 
         `,img`
@@ -192,16 +192,16 @@ function Map2 () {
         . . . f b 3 3 e 4 5 5 5 5 f . . 
         . . f b 3 3 3 3 e 4 4 4 e f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . . f 3 3 3 3 e b 3 e e 3 3 f . 
-        . . f 3 3 3 3 f f e e e 3 3 f . 
-        . . f b b b b f b f e e e 3 f . 
-        . . f b b b b e 1 f 4 4 e f . . 
-        . f f b b b b f 4 4 4 4 f . . . 
-        . f b b b b f f f e e e f . . . 
-        . . f b b f 4 4 e d d d f . . . 
-        . . . f f e 4 4 e d d d f . . . 
-        . . . . f b e e b d b d b f . . 
-        . . . . f f d 1 d 1 d 1 f f . . 
+        . . f 3 3 3 3 e b 3 d d 3 3 f . 
+        . . f 3 3 3 3 f f d d d 3 3 f . 
+        . . f e e e e f 9 f d d d 3 f . 
+        . . f e e e e e 9 f 1 1 d f . . 
+        . f f e e e e f 1 1 1 1 f . . . 
+        . f e e e e f f f e e e f . . . 
+        . . f e e f d d 1 4 4 4 f . . . 
+        . . . f f 1 d d 1 4 4 4 f . . . 
+        . . . . f b 1 1 b 4 b 4 b f . . 
+        . . . . f f 4 1 4 1 4 1 f f . . 
         . . . . . . f f b b f f . . . . 
         `,img`
         . . . . . . . . . . . . . . . . 
@@ -232,15 +232,15 @@ function Map2 () {
         . . f 5 5 5 5 4 e 3 3 b f . . . 
         . . f e 4 4 4 e 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e e 3 b e 3 3 3 3 f . . 
-        . f 3 3 e e e f f 3 3 3 3 f . . 
-        . f 3 e e e f b f b b b b f . . 
-        . . f e 4 4 f 1 e b b b b f . . 
-        . . . f 4 4 4 4 f b b b b f f . 
-        . . . f e e e f f f b b b b f . 
-        . . . f d d d e 4 4 f b b f . . 
-        . . . f d d d e 4 4 e f f . . . 
-        . . f b d b d b e e b f . . . . 
+        . f 3 3 d d 3 b d 3 3 3 3 f . . 
+        . f 3 3 d d d f f 3 3 3 3 f . . 
+        . f 3 d d d f 9 f e e e e f . . 
+        . . f d 1 1 f 9 e e e e e f . . 
+        . . . f 1 1 1 1 f e e e e f f . 
+        . . . f 1 1 1 f f f e e e e f . 
+        . . . f 4 4 4 1 4 4 f e e f . . 
+        . . . f 4 4 4 1 4 4 1 f f . . . 
+        . . f b 4 b 4 b 1 1 b f . . . . 
         . . f f 1 d 1 d 1 d f f . . . . 
         . . . . f f b b f f . . . . . . 
         `,img`
@@ -399,12 +399,12 @@ function Map4 () {
         . . . f e 4 5 5 5 5 4 e f . . . 
         . . f b 3 e 4 4 4 4 e 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 4 b 3 4 4 3 b 4 3 3 f . 
-        . f 3 3 f f 4 4 4 4 f f 3 3 f . 
-        . f 4 4 f 1 f 4 4 f 1 f 4 4 f . 
-        . f 4 4 4 1 f d d f 1 4 4 4 f . 
-        f f 4 4 f d d d d d d f 4 4 f f 
-        f 4 4 f f f d d d d f f f 4 4 f 
+        . f 3 3 e b 3 e e 3 b e 3 3 f . 
+        . f 3 3 f f e e e e f f 3 3 f . 
+        . f e e f 1 f e e f 1 f e e f . 
+        . f e e e 1 f d d f 1 e e e f . 
+        f f e e f d d d d d d f e e f f 
+        f e e f f f d d d d f f f e e f 
         . f d d f b b b b b b f d d f . 
         . . d d c d d d d d d c d d . . 
         . . d f b d b d b d b b f d . . 
@@ -434,12 +434,12 @@ function Map3 () {
         . . . f e 4 5 5 5 5 4 e f . . . 
         . . f b 3 e 4 4 4 4 e 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 4 b 3 4 4 3 b 4 3 3 f . 
-        . f 3 3 f f 4 4 4 4 f f 3 3 f . 
-        . f 4 4 f 1 f 4 4 f 1 f 4 4 f . 
-        . f 4 4 4 1 f d d f 1 4 4 4 f . 
-        f f 4 4 f d d d d d d f 4 4 f f 
-        f 4 4 f f f d d d d f f f 4 4 f 
+        . f 3 3 e b 3 e e 3 b e 3 3 f . 
+        . f 3 3 f f e e e e f f 3 3 f . 
+        . f e e f 1 f e e f 1 f e e f . 
+        . f e e e 1 f d d f 1 e e e f . 
+        f f e e f d d d d d d f e e f f 
+        f e e f f f d d d d f f f e e f 
         . f d d f b b b b b b f d d f . 
         . . d d c d d d d d d c d d . . 
         . . d f b d b d b d b b f d . . 
@@ -581,16 +581,16 @@ function Map3 () {
         . . . f b 3 3 e 4 5 5 5 5 f . . 
         . . f b 3 3 3 3 e 4 4 4 e f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . . f 3 3 3 3 e b 3 e e 3 3 f . 
-        . . f 3 3 3 3 f f e e e 3 3 f . 
-        . . f b b b b f b f e e e 3 f . 
-        . . f b b b b e 1 f 4 4 e f . . 
-        . f f b b b b f 4 4 4 4 f . . . 
-        . f b b b b f f f e e e f . . . 
-        . . f b b f 4 4 e d d d f . . . 
-        . . . f f e 4 4 e d d d f . . . 
-        . . . . f b e e b d b d b f . . 
-        . . . . f f d 1 d 1 d 1 f f . . 
+        . . f 3 3 3 3 e b 3 d d 3 3 f . 
+        . . f 3 3 3 3 f f d d d 3 3 f . 
+        . . f e e e e f 9 f d d d 3 f . 
+        . . f e e e e e 9 f 1 1 d f . . 
+        . f f e e e e f 1 1 1 1 f . . . 
+        . f e e e e f f f e e e f . . . 
+        . . f e e f d d 1 4 4 4 f . . . 
+        . . . f f 1 d d 1 4 4 4 f . . . 
+        . . . . f b 1 1 b 4 b 4 b f . . 
+        . . . . f f 4 1 4 1 4 1 f f . . 
         . . . . . . f f b b f f . . . . 
         `,img`
         . . . . . . . . . . . . . . . . 
@@ -599,15 +599,15 @@ function Map3 () {
         . . . f b 3 3 e 4 5 5 5 5 f . . 
         . . f b 3 3 3 3 e 4 4 4 e f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 3 f . 
-        . . f 3 3 3 3 e b 3 e e 3 3 f . 
-        . . f 3 3 3 3 f f e e e 3 3 f . 
-        . f f b b b b f b f e e e f . . 
-        . f b b b b b e 1 f 4 4 e . . . 
-        . f b b b b b f 4 4 4 4 f . . . 
-        . . f b b b 4 4 e d d d f . . . 
-        . . . f f f 4 4 e d d d f . . . 
-        . . . f b b e e b b d d d f . . 
-        . . . . f b d d 1 d 1 d b f . . 
+        . . f 3 3 3 3 e b 3 1 1 3 3 f . 
+        . . f 3 3 3 3 f f 1 1 1 3 3 f . 
+        . f f e e e e f b f 1 1 1 f . . 
+        . f e e e e e e 1 f d d 1 . . . 
+        . f e e e e e f d d d d f . . . 
+        . . f e e e d d e 4 4 4 f . . . 
+        . . . f f f d d e 4 4 4 f . . . 
+        . . . f b b e e b b 4 4 4 f . . 
+        . . . . f b 4 4 1 4 1 4 b f . . 
         . . . . . f f f b b f f f . . . 
         `],
     200,
@@ -621,15 +621,15 @@ function Map3 () {
         . . f 5 5 5 5 4 e 3 3 b f . . . 
         . . f e 4 4 4 e 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e e 3 b e 3 3 3 3 f . . 
-        . f 3 3 e e e f f 3 3 3 3 f . . 
-        . f 3 e e e f b f b b b b f . . 
-        . . f e 4 4 f 1 e b b b b f . . 
-        . . . f 4 4 4 4 f b b b b f f . 
-        . . . f e e e f f f b b b b f . 
-        . . . f d d d e 4 4 f b b f . . 
-        . . . f d d d e 4 4 e f f . . . 
-        . . f b d b d b e e b f . . . . 
+        . f 3 3 d d 3 b d 3 3 3 3 f . . 
+        . f 3 3 d d d f f 3 3 3 3 f . . 
+        . f 3 d d d f 9 f e e e e f . . 
+        . . f d 1 1 f 9 e e e e e f . . 
+        . . . f 1 1 1 1 f e e e e f f . 
+        . . . f 1 1 1 f f f e e e e f . 
+        . . . f 4 4 4 1 4 4 f e e f . . 
+        . . . f 4 4 4 1 4 4 1 f f . . . 
+        . . f b 4 b 4 b 1 1 b f . . . . 
         . . f f 1 d 1 d 1 d f f . . . . 
         . . . . f f b b f f . . . . . . 
         `,img`
@@ -639,15 +639,15 @@ function Map3 () {
         . . f 5 5 5 5 4 e 3 3 b f . . . 
         . . f e 4 4 4 e 3 3 3 3 b f . . 
         . f 3 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e e 3 b e 3 3 3 3 f . . 
-        . f 3 3 e e e f f 3 3 3 3 f . . 
-        . . f e e e f b f b b b b f f . 
-        . . . e 4 4 f 1 e b b b b b f . 
-        . . . f 4 4 4 4 f b b b b b f . 
-        . . . f d d d e 4 4 b b b f . . 
-        . . . f d d d e 4 4 f f f . . . 
-        . . f d d d b b e e b b f . . . 
-        . . f b d 1 d 1 d d b f . . . . 
+        . f 3 3 d d 3 b d 3 3 3 3 f . . 
+        . f 3 3 d d d f f 3 3 3 3 f . . 
+        . . f d d d f 9 f b b b b f f . 
+        . . . d 1 1 f 9 d b b b b b f . 
+        . . . f 1 1 1 1 f b b b b b f . 
+        . . . f 4 4 4 d 1 1 b b b f . . 
+        . . . f 4 4 4 d 1 1 f f f . . . 
+        . . f 4 4 4 b b d d b b f . . . 
+        . . f b 4 1 4 1 d d b f . . . . 
         . . . f f f b b f f f . . . . . 
         `],
     200,
@@ -662,14 +662,14 @@ function Map3 () {
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
         . f 3 3 3 3 3 3 3 3 3 3 3 3 f . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        f c b b b b b b b b b b b b c f 
-        f b b b b b b b b b b b b b b f 
-        . f c c b b b b b b b b c c f . 
-        . . e 4 c f f f f f f c 4 e . . 
-        . . e f b d b d b d b b f e . . 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        f c e e e e e e e e e e e e c f 
+        f e e e e e e e e e e e e e e f 
+        . f c c e e e e e e e e c c f . 
+        . . 1 d c f f f f f f c d 1 . . 
+        . . 1 f b d b d b d b b f 1 . . 
         . . . f f 1 d 1 d 1 d f f . . . 
         . . . . . f f b b f f . . . . . 
         `,img`
@@ -679,15 +679,15 @@ function Map3 () {
         . . . f e 3 3 3 3 3 3 e f . . . 
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        f c b b b b b b b b b b b b f . 
-        f b b b b b b b b b b b b c f . 
-        f f b b b b b b b b b b c f . . 
-        . f c c c f f f f f f f e c . . 
-        . . . f b b d b d d e 4 4 e . . 
-        . . . f f 1 1 d 1 d e e f . . . 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        f c e e e e e e e e e e e e f . 
+        f e e e e e e e e e e e e c f . 
+        f f e e e e e e e e e e c f . . 
+        . f c c c f f f f f f f d c . . 
+        . . . f b b 4 b 4 4 d 1 1 d . . 
+        . . . f f 1 1 4 1 4 d d f . . . 
         . . . . . f b b f f f . . . . . 
         `,img`
         . . . . . f f 4 4 f f . . . . . 
@@ -696,12 +696,12 @@ function Map3 () {
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
         . f 3 3 3 3 3 3 3 3 3 3 3 3 f . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        f c b b b b b b b b b b b b c f 
-        f b b b b b b b b b b b b b b f 
-        . f c c b b b b b b b b c c f . 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        f c e e e e e e e e e e e e c f 
+        f e e e e e e e e e e e e e e f 
+        . f c c e e e e e e e e c c f . 
         . . e 4 c f f f f f f c 4 e . . 
         . . e f b d b d b d b b f e . . 
         . . . f f 1 d 1 d 1 d f f . . . 
@@ -713,12 +713,12 @@ function Map3 () {
         . . . f e 3 3 3 3 3 3 e f . . . 
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        . f b b b b b b b b b b b b c f 
-        . f c b b b b b b b b b b b b f 
-        . . f c b b b b b b b b b b f f 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        . f e e e e e e e e e e e e c f 
+        . f c e e e e e e e e e e e e f 
+        . . f c e e e e e e e e e e f f 
         . . c e f f f f f f f c c c f . 
         . . e 4 4 e d d b d b b f . . . 
         . . . f e e d 1 d 1 1 f f . . . 
@@ -803,6 +803,11 @@ function Map3 () {
     )
     boss_map3()
 }
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.field1, function (sprite, location) {
+    game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
+    x0 = 1
+    Map2()
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileGrass2, function (sprite, location) {
     Map3()
     game.showLongText("This is a forbidden land guarded by a Guardian God", DialogLayout.Bottom)
@@ -819,12 +824,12 @@ function Map1 () {
         . . . f e 4 5 5 5 5 4 e f . . . 
         . . f b 3 e 4 4 4 4 e 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 4 b 3 4 4 3 b 4 3 3 f . 
-        . f 3 3 f f 4 4 4 4 f f 3 3 f . 
-        . f 4 4 f 1 f 4 4 f 1 f 4 4 f . 
-        . f 4 4 4 1 f d d f 1 4 4 4 f . 
-        f f 4 4 f d d d d d d f 4 4 f f 
-        f 4 4 f f f d d d d f f f 4 4 f 
+        . f 3 3 e b 3 e e 3 b e 3 3 f . 
+        . f 3 3 f f e e e e f f 3 3 f . 
+        . f e e f 1 f e e f 1 f e e f . 
+        . f e e e 1 f d d f 1 e e e f . 
+        f f e e f d d d d d d f e e f f 
+        f e e f f f d d d d f f f e e f 
         . f d d f b b b b b b f d d f . 
         . . d d c d d d d d d c d d . . 
         . . d f b d b d b d b b f d . . 
@@ -845,16 +850,16 @@ function Map1 () {
         . . . f b 3 3 e 4 5 5 5 5 f . . 
         . . f b 3 3 3 3 e 4 4 4 e f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . . f 3 3 3 3 e b 3 e e 3 3 f . 
-        . . f 3 3 3 3 f f e e e 3 3 f . 
-        . . f b b b b f b f e e e 3 f . 
-        . . f b b b b e 1 f 4 4 e f . . 
-        . f f b b b b f 4 4 4 4 f . . . 
-        . f b b b b f f f e e e f . . . 
-        . . f b b f 4 4 e d d d f . . . 
-        . . . f f e 4 4 e d d d f . . . 
-        . . . . f b e e b d b d b f . . 
-        . . . . f f d 1 d 1 d 1 f f . . 
+        . . f 3 3 3 3 e b 3 d d 3 3 f . 
+        . . f 3 3 3 3 f f d d d 3 3 f . 
+        . . f e e e e f 9 f d d d 3 f . 
+        . . f e e e e e 9 f 1 1 d f . . 
+        . f f e e e e f 1 1 1 1 f . . . 
+        . f e e e e f f f e e e f . . . 
+        . . f e e f d d 1 4 4 4 f . . . 
+        . . . f f 1 d d 1 4 4 4 f . . . 
+        . . . . f b 1 1 b 4 b 4 b f . . 
+        . . . . f f 4 1 4 1 4 1 f f . . 
         . . . . . . f f b b f f . . . . 
         `,img`
         . . . . . . . . . . . . . . . . 
@@ -863,15 +868,15 @@ function Map1 () {
         . . . f b 3 3 e 4 5 5 5 5 f . . 
         . . f b 3 3 3 3 e 4 4 4 e f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 3 f . 
-        . . f 3 3 3 3 e b 3 e e 3 3 f . 
-        . . f 3 3 3 3 f f e e e 3 3 f . 
-        . f f b b b b f b f e e e f . . 
-        . f b b b b b e 1 f 4 4 e . . . 
-        . f b b b b b f 4 4 4 4 f . . . 
-        . . f b b b 4 4 e d d d f . . . 
-        . . . f f f 4 4 e d d d f . . . 
-        . . . f b b e e b b d d d f . . 
-        . . . . f b d d 1 d 1 d b f . . 
+        . . f 3 3 3 3 e b 3 1 1 3 3 f . 
+        . . f 3 3 3 3 f f 1 1 1 3 3 f . 
+        . f f e e e e f 9 f 1 1 1 f . . 
+        . f e e e e e e 9 f d d 1 . . . 
+        . f e e e e e f d d d d f . . . 
+        . . f e e e d d e 4 4 4 f . . . 
+        . . . f f f d d e 4 4 4 f . . . 
+        . . . f b b e e b b 4 4 4 f . . 
+        . . . . f b 4 4 1 4 1 4 b f . . 
         . . . . . f f f b b f f f . . . 
         `],
     200,
@@ -885,15 +890,15 @@ function Map1 () {
         . . f 5 5 5 5 4 e 3 3 b f . . . 
         . . f e 4 4 4 e 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e e 3 b e 3 3 3 3 f . . 
-        . f 3 3 e e e f f 3 3 3 3 f . . 
-        . f 3 e e e f b f b b b b f . . 
-        . . f e 4 4 f 1 e b b b b f . . 
-        . . . f 4 4 4 4 f b b b b f f . 
-        . . . f e e e f f f b b b b f . 
-        . . . f d d d e 4 4 f b b f . . 
-        . . . f d d d e 4 4 e f f . . . 
-        . . f b d b d b e e b f . . . . 
+        . f 3 3 d d 3 b d 3 3 3 3 f . . 
+        . f 3 3 d d d f f 3 3 3 3 f . . 
+        . f 3 d d d f 9 f e e e e f . . 
+        . . f d 1 1 f 9 e e e e e f . . 
+        . . . f 1 1 1 1 f e e e e f f . 
+        . . . f 1 1 1 f f f e e e e f . 
+        . . . f 4 4 4 1 4 4 f e e f . . 
+        . . . f 4 4 4 1 4 4 1 f f . . . 
+        . . f b 4 b 4 b 1 1 b f . . . . 
         . . f f 1 d 1 d 1 d f f . . . . 
         . . . . f f b b f f . . . . . . 
         `,img`
@@ -903,15 +908,15 @@ function Map1 () {
         . . f 5 5 5 5 4 e 3 3 b f . . . 
         . . f e 4 4 4 e 3 3 3 3 b f . . 
         . f 3 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e e 3 b e 3 3 3 3 f . . 
-        . f 3 3 e e e f f 3 3 3 3 f . . 
-        . . f e e e f b f b b b b f f . 
-        . . . e 4 4 f 1 e b b b b b f . 
-        . . . f 4 4 4 4 f b b b b b f . 
-        . . . f d d d e 4 4 b b b f . . 
-        . . . f d d d e 4 4 f f f . . . 
-        . . f d d d b b e e b b f . . . 
-        . . f b d 1 d 1 d d b f . . . . 
+        . f 3 3 d d 3 b d 3 3 3 3 f . . 
+        . f 3 3 d d d f f 3 3 3 3 f . . 
+        . . f d d d f 9 f e e e e f f . 
+        . . . d 1 1 f 9 d e e e e e f . 
+        . . . f 1 1 1 1 f e e e e e f . 
+        . . . f 4 4 4 d 1 1 e e e f . . 
+        . . . f 4 4 4 d 1 1 f f f . . . 
+        . . f 4 4 4 b b d d b b f . . . 
+        . . f b 4 1 4 1 d d b f . . . . 
         . . . f f f b b f f f . . . . . 
         `],
     200,
@@ -926,14 +931,14 @@ function Map1 () {
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
         . f 3 3 3 3 3 3 3 3 3 3 3 3 f . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        f c b b b b b b b b b b b b c f 
-        f b b b b b b b b b b b b b b f 
-        . f c c b b b b b b b b c c f . 
-        . . e 4 c f f f f f f c 4 e . . 
-        . . e f b d b d b d b b f e . . 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        f c e e e e e e e e e e e e c f 
+        f e e e e e e e e e e e e e e f 
+        . f c c e e e e e e e e c c f . 
+        . . 1 d c f f f f f f c d 1 . . 
+        . . 1 f b d b d b d b b f 1 . . 
         . . . f f 1 d 1 d 1 d f f . . . 
         . . . . . f f b b f f . . . . . 
         `,img`
@@ -943,15 +948,15 @@ function Map1 () {
         . . . f e 3 3 3 3 3 3 e f . . . 
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        f c b b b b b b b b b b b b f . 
-        f b b b b b b b b b b b b c f . 
-        f f b b b b b b b b b b c f . . 
-        . f c c c f f f f f f f e c . . 
-        . . . f b b d b d d e 4 4 e . . 
-        . . . f f 1 1 d 1 d e e f . . . 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        f c e e e e e e e e e e e e f . 
+        f e e e e e e e e e e e e c f . 
+        f f e e e e e e e e e e c f . . 
+        . f c c c f f f f f f f d c . . 
+        . . . f b b 4 b 4 4 d 1 1 d . . 
+        . . . f f 1 1 4 1 4 d d f . . . 
         . . . . . f b b f f f . . . . . 
         `,img`
         . . . . . f f 4 4 f f . . . . . 
@@ -960,12 +965,12 @@ function Map1 () {
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
         . f 3 3 3 3 3 3 3 3 3 3 3 3 f . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        f c b b b b b b b b b b b b c f 
-        f b b b b b b b b b b b b b b f 
-        . f c c b b b b b b b b c c f . 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        f c e e e e e e e e e e e e c f 
+        f e e e e e e e e e e e e e e f 
+        . f c c e e e e e e e e c c f . 
         . . e 4 c f f f f f f c 4 e . . 
         . . e f b d b d b d b b f e . . 
         . . . f f 1 d 1 d 1 d f f . . . 
@@ -977,12 +982,12 @@ function Map1 () {
         . . . f e 3 3 3 3 3 3 e f . . . 
         . . f b 3 3 3 3 3 3 3 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f b 3 3 3 3 3 3 3 3 3 3 b f . 
-        . f b b 3 3 3 3 3 3 3 3 b b f . 
-        . f b b b b b b b b b b b b f . 
-        . f b b b b b b b b b b b b c f 
-        . f c b b b b b b b b b b b b f 
-        . . f c b b b b b b b b b b f f 
+        . f e 3 3 3 3 3 3 3 3 3 3 e f . 
+        . f e e 3 3 3 3 3 3 3 3 e e f . 
+        . f e e e e e e e e e e e e f . 
+        . f e e e e e e e e e e e e c f 
+        . f c e e e e e e e e e e e e f 
+        . . f c e e e e e e e e e e f f 
         . . c e f f f f f f f c c c f . 
         . . e 4 4 e d d b d b b f . . . 
         . . . f e e d 1 d 1 1 f f . . . 
@@ -999,16 +1004,16 @@ function Map1 () {
         . . . f e 4 5 5 5 5 4 e f . . . 
         . . f b 3 e 4 4 4 4 e 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e b 3 e e 3 b e 3 3 f . 
-        . f 3 3 f f e e e e f f 3 3 f . 
-        . f b b f b f e e f b f b b f . 
-        . f b b e 1 f 4 4 f 1 e b b f . 
-        f f b b f 4 4 4 4 4 4 f b b f f 
+        . f 3 3 d b 3 d d 3 b d 3 3 f . 
+        . f 3 3 f f d d d d f f 3 3 f . 
+        . f b b f 9 f d d f 9 f b b f . 
+        . f b b d 9 f 1 1 f 9 d b b f . 
+        f f b b f 1 1 1 1 1 1 f b b f f 
         f b b f f f e e e e f f f b b f 
-        . f e e f b d d d d b f e e f . 
-        . . e 4 c d d d d d d c 4 e . . 
-        . . e f b d b d b d b b f e . . 
-        . . . f f 1 d 1 d 1 d f f . . . 
+        . f d d f b 4 4 4 4 b f d d f . 
+        . . d 4 c 4 4 4 4 4 4 c 4 d . . 
+        . . d f b 4 b 4 b 4 b b f d . . 
+        . . . f f 1 4 1 4 1 4 f f . . . 
         . . . . . f f b b f f . . . . . 
         `,img`
         . . . . . . . f f . . . . . . . 
@@ -1019,9 +1024,9 @@ function Map1 () {
         . f e 3 3 3 3 3 3 3 3 3 3 e f . 
         . f 3 3 e b 3 e e 3 b e 3 3 f . 
         . f b 3 f f e e e e f f 3 b f . 
-        f f b b f b f e e f b f b b f f 
-        f b b b e 1 f 4 4 f 1 e b b b f 
-        . f b b e e 4 4 4 4 4 f b b f . 
+        f f b b f 9 f e e f 9 f b b f f 
+        f b b b 1 9 f 1 1 f 9 1 b b b f 
+        . f b b 1 1 1 1 1 1 1 f b b f . 
         . . f 4 4 4 e d d d b f e f . . 
         . . f e 4 4 e d d d d c 4 e . . 
         . . . f e e d d b d b b f e . . 
@@ -1033,16 +1038,16 @@ function Map1 () {
         . . . f e 4 5 5 5 5 4 e f . . . 
         . . f b 3 e 4 4 4 4 e 3 b f . . 
         . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-        . f 3 3 e b 3 e e 3 b e 3 3 f . 
-        . f 3 3 f f e e e e f f 3 3 f . 
-        . f b b f b f e e f b f b b f . 
-        . f b b e 1 f 4 4 f 1 e b b f . 
+        . f 3 3 d b 3 d d 3 b d 3 3 f . 
+        . f 3 3 f f d d d d f f 3 3 f . 
+        . f b b f 9 f d d f 9 f b b f . 
+        . f b b d 9 f 4 4 f 9 d b b f . 
         f f b b f 4 4 4 4 4 4 f b b f f 
-        f b b f f f e e e e f f f b b f 
-        . f e e f b d d d d b f e e f . 
-        . . e 4 c d d d d d d c 4 e . . 
-        . . e f b d b d b d b b f e . . 
-        . . . f f 1 d 1 d 1 d f f . . . 
+        f b b f f f d d d d f f f b b f 
+        . f d d f b 4 4 4 4 b f e d f . 
+        . . d 4 c 4 4 4 4 4 4 c 4 d . . 
+        . . d f b 4 b 4 b 4 b b f d . . 
+        . . . f f 1 4 1 4 1 4 f f . . . 
         . . . . . f f b b f f . . . . . 
         `,img`
         . . . . . . . f f . . . . . . . 
@@ -1051,26 +1056,21 @@ function Map1 () {
         . . . f e 4 5 5 5 5 4 e f . . . 
         . . f b 3 e 4 4 4 4 e 3 b f . . 
         . f e 3 3 3 3 3 3 3 3 3 3 e f . 
-        . f 3 3 e b 3 e e 3 b e 3 3 f . 
-        . f b 3 f f e e e e f f 3 b f . 
-        f f b b f b f e e f b f b b f f 
-        f b b b e 1 f 4 4 f 1 e b b b f 
-        . f b b f 4 4 4 4 4 e e b b f . 
-        . . f e f b d d d e 4 4 4 f . . 
-        . . e 4 c d d d d e 4 4 e f . . 
-        . . e f b b d b d d e e f . . . 
-        . . . f f 1 1 d 1 d 1 f f . . . 
+        . f 3 3 1 b 3 1 1 3 b 1 3 3 f . 
+        . f b 3 f f 1 1 1 1 f f 3 b f . 
+        f f b b f 9 f 1 1 f 9 f b b f f 
+        f b b b 1 9 f d d f 9 1 b b b f 
+        . f b b f 4 d d d d 1 1 b b f . 
+        . . f 1 f b 4 4 4 1 4 4 4 f . . 
+        . . 1 4 c 4 4 4 4 1 4 4 e f . . 
+        . . 1 f b b 4 b 4 4 1 1 f . . . 
+        . . . f f 1 1 4 1 d 1 f f . . . 
         . . . . . f b b f f f . . . . . 
         `],
     200,
     characterAnimations.rule(Predicate.MovingDown)
     )
 }
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite, location) {
-    game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
-    x0 = 1
-    Map3()
-})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (projectile.overlapsWith(boss)) {
         hp_boss += randint(-50, -10)
@@ -1225,12 +1225,12 @@ nv1_talk1 = sprites.create(img`
     . . . f e 4 5 5 5 5 4 e f . . . 
     . . f b 3 e 4 4 4 4 e 3 b f . . 
     . . f 3 3 3 3 3 3 3 3 3 3 f . . 
-    . f 3 3 4 b 3 4 4 3 b 4 3 3 f . 
-    . f 3 3 f f 4 4 4 4 f f 3 3 f . 
-    . f 4 4 f 1 f 4 4 f 1 f 4 4 f . 
-    . f 4 4 4 1 f d d f 1 4 4 4 f . 
-    f f 4 4 f d d d d d d f 4 4 f f 
-    f 4 4 f f f d d d d f f f 4 4 f 
+    . f 3 3 e b 3 e e 3 b e 3 3 f . 
+    . f 3 3 f f e e e e f f 3 3 f . 
+    . f e e f 1 f e e f 1 f e e f . 
+    . f e e e 1 f d d f 1 e e e f . 
+    f f e e f d d d d d d f e e f f 
+    f e e f f f d d d d f f f e e f 
     . f d d f b b b b b b f d d f . 
     . . d d c d d d d d d c d d . . 
     . . d f b d b d b d b b f d . . 
@@ -1263,153 +1263,162 @@ game.onUpdate(function () {
     if (x1 == 1) {
         if (boss.vy < 0) {
             boss.setImage(img`
-                .............6666.................................
-                ..........666667766.66677777777777777777777.......
-                .........677777777767776...................777....
-                ......66667775577757777666...................77...
-                .....677666675557557776777666.................77..
-                .....6776777775555577777766776..................7.
-                ...66666777777775777777766666...................77
-                .66667767777755757555777776776...................7
-                6666777677775577557555777767766..................7
-                .6667767777777775577777777767666.................7
-                .c6766777677777775777777677766...................7
-                cc77666667777777777777777666666c.................7
-                cc76666677777777777777777766776c.................7
-                c6666776777777777777766677666776.................7
-                66667766667776777767767766766666.................7
-                ccc76677677776677766767776776ccc................77
-                cc7766776777677677676667767766cc................7.
-                .666c676667677766667766666666cc................77.
-                .ccc66676666776666677677666cccc...............77..
-                ...ccc77c6767666676676677666ccc...............7...
-                ...cc676c7766676677666666c666cc..............7....
-                ....c6cc676c6677677c66c666ccc..............77.....
-                ....ccccc6c66667667cc6ccc6ccc.............77......
-                ......ccccc66c66c66cccccccc.............777.......
-                .......cc.cc6c6ccc6cc777777...........777.........
-                ...........cccccccccc......77777777777............
-                .............feeeeee..............................
-                ............feeeeeefe................e............
-                .........eeeeefeeeffee...............e............
-                ............feffeef..ee..............e............
-                .............e.fee...................e............
-                .............e..e....................e............
-                .............e.......................e............
-                .............e......................e.............
-                .............e......................e.............
-                .............e......................e.............
-                .............e.....................ee.............
-                .............e.....................e..............
-                .............e....................ee..............
-                .............e....................e...............
-                ..............e..................ee...............
-                ..............e..................e................
-                ..............e.................e.................
-                ..............e................ee.................
-                ..............e................e..................
-                ...............e..............e...................
-                ...............e..............e...................
-                ...............e.............e....................
-                ................eeeeeeeeeeeee.....................
-                ................e..........ee.....................
+                .....................666666.......................
+                ................66666666777666..666666............
+                ................66666666777666..666666............
+                ..............667777777777777766777776............
+                .........666666677777555777775777777766666........
+                .........666666677777555777775777777766666........
+                ........677766666667755557755577777667777766666...
+                ........6777667777777755555555777777777766677776..
+                ........6777667777777755555555777777777766677776..
+                ....6666666677777777777775577777777777666666666...
+                ....6666666677777777777775577777777777666666666...
+                .66666667776777777777555755775555577777777677776..
+                66666677777677777775557775555755555777777767777666
+                66666677777677777775557775555755555777777767777666
+                .6666677766777777777777775555777777777777776677666
+                .cc677666777776677777777777557777777776677777666..
+                .cc677666777776677777777777557777777776677777666..
+                ccc77766666666777777777777777777777777776666666666
+                ccc77766666666777777777777777777777777776666666666
+                ccc76666666672277777777777777777777227777766677766
+                c6666666777677227777777777777777722266777766666777
+                c6666666777677222777777777777777226666777766666777
+                66666677766666662277767777777672276777666676666666
+                cccc7766677766777277766677777622776777776677766ccc
+                cccc7766677766777777766677777666776777776677766ccc
+                ccc777666777667777766777677776776666677766777666cc
+                ccc777666777667777766777677776776666677766777666cc
+                .66666cc677666667667777766666677776666666666666ccc
+                .ccccc6666676666666777666666667777677766666ccccccc
+                .ccccc6666676666666777666666667777677766666ccccccc
+                ....ccccc777cc6676677666666776667766677766666ccccc
+                ....cccc6776cc77766666776667776666666666cc66666ccc
+                ....cccc6776cc77766666776667776666666666cc66666ccc
+                ......cc6ccc66776cc66677766777cc666cc66666ccccc...
+                ......cc6ccc66776cc66677766777cc666cc66666ccccc...
+                ......cccccccc66c6666666766667cccc6ccccc66ccccc...
+                .........cccccccc6666c666cc666ccccccccccccc.......
+                .........cccccccc6666c666cc666ccccccccccccc.......
+                ...........ccc..ccc66c66ccccc6ccccccc.cccc........
+                .................ccccccccccccccccc................
+                .................ccccccccccccccccc................
+                .....................feeeeeeeeee..................
+                .....................feeeeeeeeee..................
+                ...................ffeeeeeeeeeffee................
+                ..............eeeeeeeeffeeeeefffeee...............
+                ..............eeeeeeeeffeeeeefffeee...............
+                ...................ffffffeeeef....eee.............
+                ........................feeee.....................
+                ........................feeee.....................
+                .........................ee.......................
                 `)
         } else if (boss.vy > 0) {
             boss.setImage(img`
-                ................86..................
-                ...........6688867886...............
-                ...........8666877688868............
-                ............868777767768............
-                .........688667777776688............
-                ........67767777777778666...........
-                .........6776667767666868...........
-                ..........866667667677688...........
-                .........8666666666667778...........
-                ........667766666666666676..........
-                .......67766667666776667776.........
-                ......886667776676777666688.........
-                .....67766777667767777666768........
-                ....6776666666777667776666776.......
-                .....8667776667766676677776776......
-                ......8777666666667776777776688.....
-                ....6887766776677677777777776776....
-                ..8866666677767777777777766666778...
-                .86666666777667767777766666776668...
-                ..88677666666777677677666667776668..
-                ..86776677666666666666667776666668..
-                886666677766667666666776677766668...
-                6668666676667766767767766677666668..
-                88866666666777677677667666666776668.
-                .86668866666766776776666667766666668
-                .86688666666666776666667667776666688
-                .668866666666666666666677666666688..
-                ..8866686666666666677667776666668...
-                ...866886666666666677667776666668...
-                ...86886668666666667666666666888....
-                ....88866886686666666666666668......
-                ......86886668666866668666868.......
-                ......88866688668866688866888.......
-                ........8888888688888ce868..........
-                ..............e88e88.ec.8...........
-                ...............eeee..e..............
-                ...............ceef.ce..............
-                ...............ceefcec..............
-                ...............feefce...............
-                ...............fceeec...............
-                ...............ffceec...............
+                ........................86........................
+                ........................86........................
+                ..................666888678886....................
+                ..................866668776688868.................
+                ...................88687777767768.................
+                ................68866677777776688.................
+                ................68866677777776688.................
+                ...............67767777777777786666...............
+                ................6776666776776668688...............
+                .................866666766776776888...............
+                ................8666666666666677788...............
+                ................8666666666666677788...............
+                ...............667766666666666666776..............
+                ..............67766666766677766677776.............
+                ............8886667777667677776666688.............
+                ...........677766777766776777776666768............
+                ...........677766777766776777776666768............
+                ..........67776666666677766677766666776...........
+                ...........86667776666776666766777776776..........
+                ............887776666666667777677777766888........
+                ..........688877667776677677777777777767776.......
+                ..........688877667776677677777777777767776.......
+                ........886666666777767777777777777666667778......
+                .......8666666667776667767777776666667766668......
+                ........8867776666666777677767766666677766668.....
+                ........8677666776666666666666666777766666668.....
+                ........8677666776666666666666666777766666668.....
+                .....888666666777666667666666677666777666668......
+                .....6666866666766677766767776776666776666668.....
+                .....88886666666667777677677766766666667776668....
+                .......8666888666667766776777666666677666666668...
+                .......8666888666667766776777666666677666666668...
+                .......8668866666666666776666666766677766666688...
+                .......66886666666666666666666667776666666688.....
+                ........886666866666666666667766777766666668......
+                .........86688866666666666667766777766666668......
+                .........86688866666666666667766777766666668......
+                .........8688866686666666666766666666668888.......
+                ..........888866886668666666666666666668..........
+                ............886886666866686666686666868...........
+                ............888866688866886666888666888...........
+                ............888866688866886666888666888...........
+                ...............888888886888888ce8668..............
+                ......................e88e888.ec.88...............
+                .......................eeeee..e...................
+                .......................ceeff.ce...................
+                .......................ceeff.ce...................
+                .......................ceeffcec...................
+                .......................feeffce....................
+                .......................fceeeec....................
                 `)
         } else {
             boss.setImage(img`
-                ......cc66...........................7777.........
-                .....c6576c......................7777....777......
-                ....c677576c..................777...........7.....
-                ....cc677666..............7777...............77...
-                ...cc6c6667cc......7777777....................7...
-                ..6c666777c777777777...........................7..
-                ..c76666766776..................................7.
-                ..c6777777776c..................................7.
-                ..cc67777776cc..................................7.
-                .c67cc76676676c.................................7.
-                .c777666667777c..................................7
-                .c6777777777766..................................7
-                .cc7767776776666.................................7
-                c676cc6766666776.................................7
-                c777766666677776.................................7
-                cc7777777777776c.................................7
-                .c676777677767c..................................7
-                ..cc667666766c..................................77
-                ...ccc6c66ccc.....7777777777777777777777777777777.
-                .....ccccc77777....77.............................
-                .......ee......77777..............................
-                ......eeee........................................
-                .....eeeeee..7....................................
-                .......ee....7....................................
-                .....7.......7....................................
-                .....7........7...................................
-                .....7........7...................................
-                .....7.........7..................................
-                .....7.........7..................................
-                .....7.........7..................................
-                .....7.........7..................................
-                .....7........77..................................
-                ......7.......7...................................
-                ......7......7....................................
-                ......7......7....................................
-                ......7.....7.....................................
-                ......7.....7.....................................
-                ......7.....7.....................................
-                ......7....7......................................
-                ......7....7......................................
-                ......7....7......................................
-                .......7..7.......................................
-                .......7..7.......................................
-                .......7.77.......................................
-                .......7.7........................................
-                .......777........................................
-                .......77.........................................
-                ........7.........................................
-                .........7........................................
-                .........7........................................
+                ........................86........................
+                ........................86........................
+                ..................666888678886....................
+                ..................866668776688868.................
+                ...................88687777767768.................
+                ................68866677777776688.................
+                ................68866677777776688.................
+                ...............67767777777777786666...............
+                ................6776666776776668688...............
+                .................866666766776776888...............
+                ................8666666666666677788...............
+                ................8666666666666677788...............
+                ...............667766666666666666776..............
+                ..............67766666766677766677776.............
+                ............8886667777667677776666688.............
+                ...........677766777766776777776666768............
+                ...........677766777766776777776666768............
+                ..........67776666666677766677766666776...........
+                ...........86667776666776666766777776776..........
+                ............887776666666667777677777766888........
+                ..........688877667776677677777777777767776.......
+                ..........688877667776677677777777777767776.......
+                ........886666666777767777777777777666667778......
+                .......8666666667776667767777776666667766668......
+                ........8867776666666777677767766666677766668.....
+                ........8677666776666666666666666777766666668.....
+                ........8677666776666666666666666777766666668.....
+                .....888666666777666667666666677666777666668......
+                .....6666866666766677766767776776666776666668.....
+                .....88886666666667777677677766766666667776668....
+                .......8666888666667766776777666666677666666668...
+                .......8666888666667766776777666666677666666668...
+                .......8668866666666666776666666766677766666688...
+                .......66886666666666666666666667776666666688.....
+                ........886666866666666666667766777766666668......
+                .........86688866666666666667766777766666668......
+                .........86688866666666666667766777766666668......
+                .........8688866686666666666766666666668888.......
+                ..........888866886668666666666666666668..........
+                ............886886666866686666686666868...........
+                ............888866688866886666888666888...........
+                ............888866688866886666888666888...........
+                ...............888888886888888ce8668..............
+                ......................e88e888.ec.88...............
+                .......................eeeee..e...................
+                .......................ceeff.ce...................
+                .......................ceeff.ce...................
+                .......................ceeffcec...................
+                .......................feeffce....................
+                .......................fceeeec....................
                 `)
         }
         if (boss.isHittingTile(CollisionDirection.Bottom)) {
