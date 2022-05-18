@@ -1,7 +1,7 @@
  
 
 
-> Open this page at [fb.com/trngbro](https://www.facebook.com/trngbro)
+> Open this page at [Github@trngbro](https://github.com/trngbro/Puff_Corn)
 
 ## Document (Vietnamese)
 
