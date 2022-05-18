@@ -1257,7 +1257,7 @@ nv2_talk1 = sprites.create(img`
     `, SpriteKind.Player)
 nv1_talk1.setPosition(50, 82)
 nv2_talk1.setPosition(100, 81)
-hp_boss = 10
+hp_boss = 500
 Map1()
 game.onUpdate(function () {
     if (x1 == 1) {
@@ -1429,22 +1429,15 @@ game.onUpdate(function () {
 game.onUpdateInterval(2000, function () {
     if (x1 == 1) {
         projectile = sprites.createProjectileFromSprite(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . 1 1 3 . . . . . . 
-            . . . . . . 1 3 . 3 3 . . . . . 
-            . . . . . . 1 . . . 3 2 2 3 . . 
-            . . . . . 1 3 . . . 2 2 1 3 3 . 
-            . . . . . 1 3 . 2 2 3 1 1 1 3 . 
-            . . 2 2 2 1 3 3 3 3 3 1 1 1 3 . 
-            . . 1 1 1 1 3 1 1 1 1 1 1 1 3 . 
-            . . 2 2 2 1 3 3 3 3 3 1 1 1 3 . 
-            . . . . . 1 3 . 2 2 3 1 1 1 3 . 
-            . . . . . 1 3 . . . 2 2 1 3 3 . 
-            . . . . . . 1 . . . 3 2 2 3 . . 
-            . . . . . . 1 3 . 3 3 . . . . . 
-            . . . . . . . 1 1 3 . . . . . . 
-            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . . . . . 
+            . . . . . . 1 . . . . . . . . 4 . 4 . . 
+            . . . . 1 1 1 . . . . . . . 4 . 4 . . . 
+            . . . 1 1 1 e e e e e e e e e e e e f . 
+            . . 1 1 1 e e e e e e e e e e e e e . . 
+            . . . 1 1 1 e e e e e e e e e e e e f . 
+            . . . . 1 1 1 . . . . . . . 4 . 4 . . . 
+            . . . . . . 1 . . . . . . . . 4 . 4 . . 
+            . . . . . . . . . . . . . . . . . . . . 
             `, nv_map3, -100, 0)
     }
 })
