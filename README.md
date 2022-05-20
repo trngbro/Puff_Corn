@@ -5,7 +5,8 @@
 
 ## Document (Vietnamese)
 
-
+## MakeCode
+> Source at [https://arcade.makecode.com/](https://makecode.com/_d1sKkVPhcTRv)
 
 ## Blocks preview
 
@@ -16,5 +17,8 @@ This image may take a few minutes to refresh.
 
 #### Metadata (used for search, rendering)
 
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Use simulator {
+
+<div style="position:relative;height:0;padding-bottom:117.6%;overflow:hidden;"><iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://arcade.makecode.com/---run?id=_d1sKkVPhcTRv" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-forms allow-scripts allow-same-origin" frameborder="0"></iframe></div>
+
+}
