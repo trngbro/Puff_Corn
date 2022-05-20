@@ -11,7 +11,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
     if (skill1_boss_map32.overlapsWith(nv_map3)) {
         nv_map3.destroy(effects.spray, 500)
-        game.showLongText("Hay thu lai nao", DialogLayout.Bottom)
+        game.showLongText("Don't hit the skill. Try again!", DialogLayout.Bottom)
         boss.destroy()
         pause(1000)
         skill1_boss_map32.destroy()
@@ -19,7 +19,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, ot
     }
     if (skill2_boss_map3.overlapsWith(nv_map3)) {
         nv_map3.destroy(effects.spray, 500)
-        game.showLongText("Hay thu lai nao", DialogLayout.Bottom)
+        game.showLongText("Don't hit the skill. Try again!", DialogLayout.Bottom)
         boss.destroy()
         skill2_boss_map3.destroy()
         pause(1000)
@@ -27,7 +27,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, ot
     }
     if (skill3_boss_map3.overlapsWith(nv_map3)) {
         nv_map3.destroy(effects.spray, 500)
-        game.showLongText("Hay thu lai nao", DialogLayout.Bottom)
+        game.showLongText("Don't hit the skill. Try again!", DialogLayout.Bottom)
         boss.destroy()
         skill3_boss_map3.destroy()
         pause(1000)
@@ -77,6 +77,8 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, 
     game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
     x0 = 1
     Map3()
+    game.showLongText("This is a forbidden land guarded by a Guardian God", DialogLayout.Bottom)
+    game.showLongText("Let's destroy the Guardian with the Witch's item", DialogLayout.Bottom)
 })
 function Map2 () {
     nv_map1.destroy()
@@ -413,17 +415,17 @@ function Map4 () {
         `, SpriteKind.Player)
     nv_map4.setPosition(36, 79)
     scene.cameraFollowSprite(nv_map4)
-    game.showLongText("Ban co giet khong", DialogLayout.Bottom)
+    game.showLongText("Do you want to kill the boss?", DialogLayout.Bottom)
     story.showPlayerChoices("Yes", "No")
     if (story.checkLastAnswer("Yes")) {
-        game.showLongText("ngu", DialogLayout.Bottom)
-        game.showLongText("thank you for play", DialogLayout.Bottom)
+        game.showLongText("You've got what you need...", DialogLayout.Bottom)
+        game.showLongText("Thank you for experiencing our game, we will update  stories, please support us!", DialogLayout.Bottom)
         game.over(false)
     }
     if (story.checkLastAnswer("No")) {
-        game.showLongText("hay", DialogLayout.Bottom)
-        game.showLongText("thank you for play", DialogLayout.Bottom)
-        game.over(false)
+        game.showLongText("Thank you for thinking for everyone, so that green will always exist", DialogLayout.Bottom)
+        game.showLongText("Thank you for experiencing our game, we will update  stories, please support us!", DialogLayout.Bottom)
+        game.over(true)
     }
 }
 function Map3 () {
@@ -573,6 +575,7 @@ function Map3 () {
     nv_map3.setStayInScreen(true)
     tiles.placeOnRandomTile(nv_map3, sprites.dungeon.collectibleBlueCrystal)
     x1 = 1
+    hp_boss = 1000
     characterAnimations.loopFrames(
     nv_map3,
     [img`
@@ -807,11 +810,6 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.field1, function (sprite,
     game.showLongText("This is the exit that leads to another place", DialogLayout.Bottom)
     x0 = 1
     Map2()
-})
-scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileGrass2, function (sprite, location) {
-    Map3()
-    game.showLongText("This is a forbidden land guarded by a Guardian God", DialogLayout.Bottom)
-    game.showLongText("Let's destroy the Guardian with the Witch's item", DialogLayout.Bottom)
 })
 function Map1 () {
     nv1_talk1.destroy()
@@ -1075,7 +1073,6 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     if (projectile.overlapsWith(boss)) {
         hp_boss += randint(-50, -10)
         projectile.destroy()
-        console.log("test")
     }
     if (hp_boss < 0) {
         x1 += 1
@@ -1084,6 +1081,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     }
 })
 let projectile: Sprite = null
+let hp_boss = 0
 let x1 = 0
 let nv_map4: Sprite = null
 let nv_map1: Sprite = null
@@ -1094,7 +1092,6 @@ let nv_map3: Sprite = null
 let skill1_boss_map32: Sprite = null
 let nv_map2: Sprite = null
 let x0 = 0
-let hp_boss = 0
 let nv2_talk1: Sprite = null
 let nv1_talk1: Sprite = null
 scene.setBackgroundImage(img`
@@ -1257,7 +1254,6 @@ nv2_talk1 = sprites.create(img`
     `, SpriteKind.Player)
 nv1_talk1.setPosition(50, 82)
 nv2_talk1.setPosition(100, 81)
-hp_boss = 500
 Map1()
 game.onUpdate(function () {
     if (x1 == 1) {
