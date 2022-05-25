@@ -575,7 +575,7 @@ function Map3 () {
     nv_map3.setStayInScreen(true)
     tiles.placeOnRandomTile(nv_map3, sprites.dungeon.collectibleBlueCrystal)
     x1 = 1
-    hp_boss = 1000
+    hp_boss = 1000000000000000
     characterAnimations.loopFrames(
     nv_map3,
     [img`
