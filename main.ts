@@ -1254,6 +1254,7 @@ nv2_talk1 = sprites.create(img`
     `, SpriteKind.Player)
 nv1_talk1.setPosition(50, 82)
 nv2_talk1.setPosition(100, 81)
+game.showLongText("Story...", DialogLayout.Bottom)
 Map1()
 game.onUpdate(function () {
     if (x1 == 1) {
@@ -1424,21 +1425,6 @@ game.onUpdate(function () {
 })
 game.onUpdateInterval(2000, function () {
     if (x1 == 1) {
-        projectile = sprites.createProjectileFromSprite(img`
-            . . . . . . . . . . . . . . . . . . . . 
-            . . . . . . 1 . . . . . . . . 4 . 4 . . 
-            . . . . 1 1 1 . . . . . . . 4 . 4 . . . 
-            . . . 1 1 1 e e e e e e e e e e e e f . 
-            . . 1 1 1 e e e e e e e e e e e e e . . 
-            . . . 1 1 1 e e e e e e e e e e e e f . 
-            . . . . 1 1 1 . . . . . . . 4 . 4 . . . 
-            . . . . . . 1 . . . . . . . . 4 . 4 . . 
-            . . . . . . . . . . . . . . . . . . . . 
-            `, nv_map3, -100, 0)
-    }
-})
-game.onUpdateInterval(2000, function () {
-    if (x1 == 1) {
         skill1_boss_map32 = sprites.createProjectileFromSprite(img`
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
@@ -1493,5 +1479,20 @@ game.onUpdateInterval(2000, function () {
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             `, boss, 100, 50)
+    }
+})
+game.onUpdateInterval(2000, function () {
+    if (x1 == 1) {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . . . . . 
+            . . . . . . 1 . . . . . . . . 4 . 4 . . 
+            . . . . 1 1 1 . . . . . . . 4 . 4 . . . 
+            . . . 1 1 1 e e e e e e e e e e e e f . 
+            . . 1 1 1 e e e e e e e e e e e e e . . 
+            . . . 1 1 1 e e e e e e e e e e e e f . 
+            . . . . 1 1 1 . . . . . . . 4 . 4 . . . 
+            . . . . . . 1 . . . . . . . . 4 . 4 . . 
+            . . . . . . . . . . . . . . . . . . . . 
+            `, nv_map3, -100, 0)
     }
 })
